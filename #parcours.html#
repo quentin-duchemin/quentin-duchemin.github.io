@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sidebar Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> 
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+        
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <nav class="sidebar-nav">
+                <div class="sidebar-brand">
+                    <a href="#">
+                        <img src="http://placehold.it/140x140?text=Your Logo!">
+                    </a>
+                </div>
+                <div class="login-name">
+                    <a href="#">
+                        qduchemin9@gmail.com
+                    </a>
+                </div>
+                <li>
+                    <a href="parcours.html">
+                        <i class="fa fa-users"></i>&nbsp;
+                        Parcours
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-mobile fa-lg"></i>&nbsp;
+                        Recherche
+                    </a>
+                </li>
+                <li>
+                    <a href="enseignement.html">
+                        <i class="fa fa-pencil-square-o fa-lg"></i>&nbsp;
+                        Enseignement
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-book fa-lg"></i>&nbsp;
+                        Documents
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-plus fa-lg"></i>&nbsp;
+                        Contacts
+                    </a>
+                </li>
+            </nav>
+            <div id="footer-wrapper" class="hidden-xs">
+                <footer>
+                    qduchemin9@gmail.com
+                </footer>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div id="hamburger-wrapper" class="visible-xs">
+                <div id="hamburger">
+                    <a href="#menu-toggle" id="menu-toggle">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+            <section class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Parcours</h1>
+                        <div id="content-area">
+                            <p>
+
+                              Après avoir effectué une classe préparatoire au lycée Malherbe (Caen MPSI/MP*) de 2013 à 2015, j'ai intégré l'<a href="http://www.enpc.fr/">école des Ponts ParisTech </a>. L'école offre la possibilité de se spécialiser dès la deuxième année et j'ai choisi le département Ingénierie Mathématiques et Informatique. Après ces deux premières années en école, j'ai décidé de réaliser une année de césure durant laquelle :
+
+                            - j'ai préparé et passé le concours de l'agrégation de mathématiques.
+
+                            - j'ai réalisé trois stages de recherche (au pôle <a href="https://www.edf.fr/groupe-edf/qui-sommes-nous/activites/recherche-et-developpement">R&D Osiris</a> de EDF lab Paris Saclay, au <a href="http://cimap.ensicaen.fr/?lang=fr">CIMAP</a> à Caen et au <a href="http://ligm.u-pem.fr/accueil/">LIGM</a> à Champs sur Marne).   
+
+                            J'ai ensuite étudié au sein du master <a href="http://math.ens-paris-saclay.fr/version-francaise/formations/master-mva/">MVA</a> de l'ENS Cachan avant de partir aux Etats-Unis au sein de <a href="https://cds.nyu.edu/">Center for Data Science</a> du NYU pour y réaliser mon stage de fin d'étude.
+
+
+                            Je commencerai en septembre prochain ma thèse sous la direction de <a href="http://lacour.perso.math.cnrs.fr/">Claire Lacour</a> et de <a ref="https://ydecastro.github.io/">Yohann De Castro</a>.
+
+                            </p>   
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Fun js stuff -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript">
+    </script>
+    
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" type="text/javascript">
+    </script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">    
+    </script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
