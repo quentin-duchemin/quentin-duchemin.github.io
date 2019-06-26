@@ -13,7 +13,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
     <link href="../css/style.css" rel="stylesheet">
@@ -24,6 +24,15 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+    </script>
     <script type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
     </script>
@@ -51,13 +60,13 @@
                 </div>
                 <li>
                     <a href="../parcours.html">
-                        <i class="fa fa-users"></i>&nbsp;
+                        <i class="fa fa-graduation-cap  aria-hidden="true"></i>&nbsp;
                         Parcours
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="fa fa-mobile fa-lg"></i>&nbsp;
+                    <a href="../recherche.html">
+                        <i class="fa fa-lightbulb-o" aria-hidden="true"></i>&nbsp;
                         Recherche
                     </a>
                 </li>
@@ -68,14 +77,14 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="../documents.html">
                         <i class="fa fa-book fa-lg"></i>&nbsp;
                         Documents
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="fa fa-plus fa-lg"></i>&nbsp;
+                    <a href="../contacts.html">
+                        <i class="fa fa-id-card"></i>&nbsp;
                         Contacts
                     </a>
                 </li>
@@ -100,16 +109,40 @@
             <section class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1>Section Enseignement</h1>
+                        <h1>Enseignement : Quizz</h1>
+                        <h2>Polynômes d'endomorphismes</h2>
                         <div id="content-area">
-           
-                                    <input type="hidden" id="non" value="Oui ">
-                                    <input type="hidden" id="oui" value="Heu">
-                                    Les canards ont deux pattes
+
+                            <ul>
+                                    <input type="hidden" id="false1" value="Non. Considérer par exemple les matrices 3x3 suivantes: A=[1 0 0 | 0 1 0 | 0 0 0] et B=[2 1 0 | 1 0 0 | 0 0 0].">
+                                    <input type="hidden" id="true1" value="">
+                                    <li>  Deux matrices semblables ont-elles toujours le même polynôme minimal ? </li>
                                     <br>
-                                    <button onclick="myFunction()"  style="background-color: #A8A2CC" id="ok">Vrai</button>
-                                    <button onclick="myFunction2()" id="ok"> Faux </button>
-                                    <p id="demo"></p> 
+                                    <button onclick="myFunction2(1)"  id="FALSE1">Oui</button>
+                                    <button onclick="myFunction(1)" id="TRUE1"> Non </button>
+                                    <p id="demo1"></p> 
+
+
+           
+                                    <input type="hidden" id="false2" value="Le degré du polynôme minimal d'une matrice (non nulle) de taille 2x2 est soit 1 soit 2. Or, une matrice dont le polynôme minimal est de degré 1 est une homothétie (qui est seule dans son orbite pour l'action par conjugaison de l'ensemble des matrices inversibles de taille 2x2 sur le groupe des matrices de taille 2x2). Par contraposée, toute matrice de taille 2x2 qui n'est pas une homothétie a son polynôme minimal de degré 2 : c'est donc son polynôme caractéristique (car par le théorème de Cayley Hamilton, le polynôme minimal divise le polynôme caractéristique et ces deux polynômes sont unitaires). Deux matrices semblables ont même polynôme caractéristique, ce qui conclut la preuve.">
+                                    <input type="hidden" id="true2" value="">
+
+                                    <li> Deux matrices $2\times2$ semblables ont-elles toujours le même polynôme minimal ? </li>
+                                    <br>
+                                    <button onclick="myFunction(2)"  id="TRUE2">Oui</button>
+                                    <button onclick="myFunction2(2)" id="FALSE2"> Non </button>
+                                    <p id="demo2"></p> 
+
+
+                                    <input type="hidden" id="false3" value="La matrice identité donne un contre-exemple clair.">
+                                    <input type="hidden" id="true3" value="">
+                                    <li> Le polynôme minimal de la matrice par blocs $\begin{bmatrix} A & 0 \\B & C \end{bmatrix}$ est-il toujours égal au produit des polynômes minimaux de $A$ et de $B$ ? </li>
+                                    <br>
+                                    <button onclick="myFunction2(3)"  id="FALSE3">Oui</button>
+                                    <button onclick="myFunction(3)" id="TRUE3"> Non </button>
+                                    <p id="demo3"></p> 
+
+                            </ul>
 
                         </div>
                     </div>
