@@ -185,13 +185,13 @@ html, html a {
 
 .fa-bars {
     color: #fff;
-    font-size: 1em;
+    font-size: 3em;
 }
 
 .login-name{
     min-width: 220px;
     margin-bottom: 10px;
-    font-size: 3em;
+    font-size: 1em;
     text-align: center;
 }
 
