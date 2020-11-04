@@ -25,20 +25,21 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script type="text/javascript"
+      src="./applications.js" async>
+    </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
     <script type="text/x-mathjax-config">
-          MathJax.Hub.Config({
-            tex2jax: {
-              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-              processEscapes: true
-            }
-          });
+        MathJax.Hub.Config({
+                           tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+                           });
     </script>
-    <script type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
-    </script>
-    <script type="text/javascript"
-      src="./polynomes_endomorphismes.js" async>
-    </script>
+    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+
 </head>
 
 <body>
@@ -50,7 +51,7 @@
             <nav class="sidebar-nav">
                 <div class="sidebar-brand">
                     <a href="index.html">
-                        <img src="http://placehold.it/140x140?text=Your Logo!">
+                        <img src="css/photo.PNG">
                     </a>
                 </div>
                 <div class="login-name">
@@ -113,18 +114,17 @@
                         <h2>Applications</h2>
                         <div id="content-area">
 
-                            <ul>
-                                    <input type="hidden" id="false1" value="Non. Considérer par exemple les matrices 3x3 suivantes: $A$=[1 0 0 | 0 1 0 | 0 0 0] et B=[2 1 0 | 1 0 0 | 0 0 0].">
+                                    <input type="hidden" id="false1" value="\( card(f(A)) \leq card(A) \)">
                                     <input type="hidden" id="true1" value="">
-                                    <li>  Deux matrices semblables ont-elles toujours le même polynôme minimal ? </li>
+                                    <li>  Soit $E$ un ensemble et soit $A \subset E$ un sous-ensemble fini de $E$. Que dire de card($A$) et de card($f(A)$) ? </li>
                                     <br>
-                                    <button onclick="myFunction2(1)"  id="FALSE1">Oui</button>
+                                    <button onclick="myFunction2(1)"  id="FALSE1"> card\( (f(A))\leq \) card \((A) \)</button>
                                     <button onclick="myFunction(1)" id="TRUE1"> Non </button>
                                     <p id="demo1"></p> 
 
 
            
-                                    <input type="hidden" id="false2" value="Le degré du polynôme minimal d'une matrice (non nulle) de taille 2x2 est soit 1 soit 2. Or, une matrice dont le polynôme minimal est de degré 1 est une homothétie (qui est seule dans son orbite pour l'action par conjugaison de l'ensemble des matrices inversibles de taille 2x2 sur le groupe des matrices de taille 2x2). Par contraposée, toute matrice de taille 2x2 qui n'est pas une homothétie a son polynôme minimal de degré 2 : c'est donc son polynôme caractéristique (car par le théorème de Cayley Hamilton, le polynôme minimal divise le polynôme caractéristique et ces deux polynômes sont unitaires). Deux matrices semblables ont même polynôme caractéristique, ce qui conclut la preuve.">
+                                    <input type="hidden" id="false2" value="sin(x)">
                                     <input type="hidden" id="true2" value="">
 
                                     <li> Deux matrices $2\times2$ semblables ont-elles toujours le même polynôme minimal ? </li>
@@ -152,7 +152,6 @@
 
 
 				    <p id="demo4"> Exercices et notions associees : semi-simplicite, ...</p> 
-                            </ul>
 
                         </div>
                     </div>
