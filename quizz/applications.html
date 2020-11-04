@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Page web de Quentin Duchemin</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+        
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              processEscapes: true
+            }
+          });
+    </script>
+    <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+    </script>
+    <script type="text/javascript"
+      src="./polynomes_endomorphismes.js" async>
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <nav class="sidebar-nav">
+                <div class="sidebar-brand">
+                    <a href="index.html">
+                        <img src="http://placehold.it/140x140?text=Your Logo!">
+                    </a>
+                </div>
+                <div class="login-name">
+                    <a href="index.html">
+                        Quentin Duchemin
+                    </a>
+                </div>
+                <li>
+                    <a href="../parcours.html">
+                        <i class="fa fa-graduation-cap  aria-hidden="true"></i>&nbsp;
+                        Parcours
+                    </a>
+                </li>
+                <li>
+                    <a href="../recherche.html">
+                        <i class="fa fa-lightbulb-o" aria-hidden="true"></i>&nbsp;
+                        Recherche
+                    </a>
+                </li>
+                <li>
+                    <a href="../enseignement.html">
+                        <i class="fa fa-pencil-square-o fa-lg"></i>&nbsp;
+                        Enseignement
+                    </a>
+                </li>
+                <li>
+                    <a href="../documents.html">
+                        <i class="fa fa-book fa-lg"></i>&nbsp;
+                        Documents
+                    </a>
+                </li>
+                <li>
+                    <a href="../contacts.html">
+                        <i class="fa fa-id-card"></i>&nbsp;
+                        Contacts
+                    </a>
+                </li>
+            </nav>
+            <div id="footer-wrapper" class="hidden-xs">
+                <footer>
+                    qduchemin9@gmail.com
+                </footer>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div id="hamburger-wrapper" class="visible-xs">
+                <div id="hamburger">
+                    <a href="#menu-toggle" id="menu-toggle">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+            <section class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Enseignement : Quizz</h1>
+                        <h2>Applications</h2>
+                        <div id="content-area">
+
+                            <ul>
+                                    <input type="hidden" id="false1" value="Non. Considérer par exemple les matrices 3x3 suivantes: $A$=[1 0 0 | 0 1 0 | 0 0 0] et B=[2 1 0 | 1 0 0 | 0 0 0].">
+                                    <input type="hidden" id="true1" value="">
+                                    <li>  Deux matrices semblables ont-elles toujours le même polynôme minimal ? </li>
+                                    <br>
+                                    <button onclick="myFunction2(1)"  id="FALSE1">Oui</button>
+                                    <button onclick="myFunction(1)" id="TRUE1"> Non </button>
+                                    <p id="demo1"></p> 
+
+
+           
+                                    <input type="hidden" id="false2" value="Le degré du polynôme minimal d'une matrice (non nulle) de taille 2x2 est soit 1 soit 2. Or, une matrice dont le polynôme minimal est de degré 1 est une homothétie (qui est seule dans son orbite pour l'action par conjugaison de l'ensemble des matrices inversibles de taille 2x2 sur le groupe des matrices de taille 2x2). Par contraposée, toute matrice de taille 2x2 qui n'est pas une homothétie a son polynôme minimal de degré 2 : c'est donc son polynôme caractéristique (car par le théorème de Cayley Hamilton, le polynôme minimal divise le polynôme caractéristique et ces deux polynômes sont unitaires). Deux matrices semblables ont même polynôme caractéristique, ce qui conclut la preuve.">
+                                    <input type="hidden" id="true2" value="">
+
+                                    <li> Deux matrices $2\times2$ semblables ont-elles toujours le même polynôme minimal ? </li>
+                                    <br>
+                                    <button onclick="myFunction(2)"  id="TRUE2">Oui</button>
+                                    <button onclick="myFunction2(2)" id="FALSE2"> Non </button>
+                                    <p id="demo2"></p> 
+
+
+                                    <input type="hidden" id="false3" value="La matrice identité donne un contre-exemple clair.">
+                                    <input type="hidden" id="true3" value="">
+                                    <li> Le polynôme minimal de la matrice par blocs $\begin{bmatrix} A & 0 \\B & C \end{bmatrix}$ est-il toujours égal au produit des polynômes minimaux de $A$ et de $B$ ? </li>
+                                    <br>
+                                    <button onclick="myFunction2(3)"  id="FALSE3">Oui</button>
+                                    <button onclick="myFunction(3)" id="TRUE3"> Non </button>
+                                    <p id="demo3"></p> 
+
+                                    <input type="hidden" id="false4" value="">
+                                    <input type="hidden" id="true4" value="">
+                                    <li> Soient deux matrices carrées $A$ et $B$ et soit $P$ (resp. $Q$) un polynôme annulateur de la matrice $A$ (resp. $B$). Si $P$ et $Q$ sont premiers entre eux, les matrices $A$ et $B$ peuvent-elles être semblables ? </li>
+                                    <br>
+                                    <button onclick="myFunction(4)"  id="TRUE4">Oui</button>
+                                    <button onclick="myFunction2(4)" id="FALSE4"> Non </button>
+                                    <p id="demo4"></p> 
+
+
+				    <p id="demo4"> Exercices et notions associees : semi-simplicite, ...</p> 
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Fun js stuff -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript">
+    </script>
+    
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" type="text/javascript">
+    </script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">    
+    </script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
