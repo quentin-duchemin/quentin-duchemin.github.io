@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Page web de Quentin Duchemin</title>
+    <title>Quentin Duchemin</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -62,19 +62,19 @@
                 <li>
                     <a href="../parcours.html">
                         <i class="fa fa-graduation-cap  aria-hidden="true"></i>&nbsp;
-                        Parcours
+                        Bio
                     </a>
                 </li>
                 <li>
                     <a href="../recherche.html">
                         <i class="fa fa-lightbulb-o" aria-hidden="true"></i>&nbsp;
-                        Recherche
+                        Research
                     </a>
                 </li>
                 <li>
                     <a href="../enseignement.html">
                         <i class="fa fa-pencil-square-o fa-lg"></i>&nbsp;
-                        Enseignement
+                        Teaching
                     </a>
                 </li>
                 <li>
@@ -114,25 +114,82 @@
                         <h2>Applications</h2>
                         <div id="content-area">
 
-                                    <input type="hidden" id="false1" value="\( card(f(A)) \leq card(A) \)">
-                                    <input type="hidden" id="true1" value="">
-                                    <li>  Soit $E$ un ensemble et soit $A \subset E$ un sous-ensemble fini de $E$. Que dire de card($A$) et de card($f(A)$) ? </li>
-                                    <br>
+        <input type="hidden" id="true1" value="En effet, tout élément $x \in A$ admet une unique image pour $f$ dans $F$, mais l'ensemble $f(A)$ peut potentiellement être de cardinal plus petit que celui de $A$. Il suffit de considérer une application constante pour s'en convaincre.">
+        <input type="hidden" id="false1" value="">
+        <li>  Soient $E$ et $F$ deux ensembles, et $f:E \to F$ une application. On considère $A \subset E$ un sous-ensemble $\mathbf{fini}$ de $E$. Que dire de card($A$) et de card($f(A)$) ? On choisira la réponse donnant le résultat le plus informatif possible.</li>
+        <br>
+        <FORM id="qcm1">
+        <INPUT TYPE=checkbox NAME="choix"> \( card(f(A)) \leq card(A) \)</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> \( card(f(A)) \geq card(A) \) </INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> \( card(f(A)) = card(A) \)</INPUT>
+        <BR><BR>
+        </FORM>
+        <button onclick="choix_multiple(1,[true,false,false])" id="box1">Vérifier</button>
+        <p id="message1"></p> 
 
 
-<FORM NAME="pythonqcm">
-<INPUT TYPE=checkbox NAME="choix">balise avec un nombre de tour inconnu</INPUT>
-<INPUT TYPE=checkbox NAME="choix">une balise tr�s proche de la bonne </INPUT>
-<INPUT TYPE=checkbox NAME="choix">une balise un peu �loign� de la bonne</INPUT>
-<INPUT TYPE=checkbox NAME="choix">mettre la bonne balise</INPUT>
-<BR><BR>
-</FORM>
-<button onclick="choix_multiple(1,[false,false,true,true])" id="box1">Vérifier</button>
-                <button onclick="myFunction(1)"  id="TRUE1">Oui</button>
-                                    <p id="demo1"></p> 
 
-
+        <input type="hidden" id="true2" value="">
+        <input type="hidden" id="false2" value="">
+        <li>  Soient $E$ et $F$ deux ensembles, et $f:E \to F$ une application. On considère $B \subset F$ un sous-ensemble $\mathbf{fini}$ de $F$. Que dire de card($B$) et de card($f^{-1}(B)$) ? On choisira la réponse donnant le résultat le plus informatif possible.</li>
+        <br>
+        <FORM id="qcm2">
+        <INPUT TYPE=checkbox NAME="choix"> \( card(f^{-1}(B)) \leq card(B) \)</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> \( card(f^{-1}(B)) \geq card(B) \) </INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> \( card(f^{-1}(B)) = card(B) \)</INPUT>
+        <BR><BR>
+        </FORM>
+        <button onclick="choix_multiple(2,[false,false,true])" id="box2">Vérifier</button>
+        <p id="message2"></p> 
            
+
+        <input type="hidden" id="true3" value="En effet, $0$ n'admet pas d'antécédent par $f$ et donc $f$ n'est pas surjective. Remarquons alos qu'en modifiant l'ensemble pour l'espace d'arrivée de l'application $f$, on peut construire une fonction bijective. Ainsi, $g:\mathbb N \to \mathbb N \backslash \{0\}$ telle que $g(n)=f(n), \; \forall n \in \mathbb N$ est bijective.">
+        <input type="hidden" id="false3" value="">
+        <li>  On considère $f:\mathbb N \to \mathbb N$ telle que $f(n)=n+1$. </li>
+        <br>
+        <FORM id="qcm3">
+        <INPUT TYPE=checkbox NAME="choix"> \( f \) est surjective et non injective</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> \( f \) est injective et non surjective</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> \( f \) est bijective</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> \( f \) n'est ni injective ni surjective</INPUT>
+        <BR><BR>
+        </FORM>
+        <button onclick="choix_multiple(3,[false,true,false,false])" id="box3">Vérifier</button>
+        <p id="message3"></p> 
+
+
+        <input type="hidden" id="true4" value="">
+        <input type="hidden" id="false4" value="">
+        <li>  On considère $f:\mathbb R \times \mathbb R \to \mathbb R$ telle que $$\forall (x,y) \in \mathbb R^2, \quad f(x,y)=x^2+y^2.$$
+        Cochez la ou les bonne(s) réponse(s). </li>
+        <br>
+        <FORM id="qcm4">
+        <INPUT TYPE=checkbox NAME="choix"> \( f^{-1}(\{0\})=\{(0,0)\} \) </INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> \( f^{-1}(\{1\})=\{(0,1)\} \) </INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> \( f^{-1}(\{0\})=\{(0,1)\} \) </INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> \( f^{-1}(\{1\}) \) est la cercle de centre $(0,0)$ et de rayon $1$</INPUT>
+        <BR><BR>
+        </FORM>
+        <button onclick="choix_multiple(4,[true,false,false,true])" id="box4">Vérifier</button>
+        <p id="message4"></p> 
+
+
+        <input type="hidden" id="true5" value="">
+        <input type="hidden" id="false5" value="">
+        <li>  On considère $f:\mathbb R \times \mathbb R \to \mathbb R$ telle que $$\forall (x,y) \in \mathbb R^2, \quad f(x,y)=x^2+y^2.$$
+        Cochez la ou les bonne(s) réponse(s). </li>
+        <br>
+        <FORM id="qcm5">
+        <INPUT TYPE=checkbox NAME="choix"> \( f^{-1}(\{0\})=\{(0,0)\} \) </INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> \( f^{-1}(\{1\})=\{(0,1)\} \) </INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> \( f^{-1}(\{0\})=\{(0,1)\} \) </INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> \( f^{-1}(\{1\}) \) est la cercle de centre $(0,0)$ et de rayon $1$</INPUT>
+        <BR><BR>
+        </FORM>
+        <button onclick="choix_multiple(5,[true,false,false,true])" id="box5">Vérifier</button>
+        <p id="message5"></p> 
+<!-- 
+        
                                     <input type="hidden" id="false2" value="sin(x)">
                                     <input type="hidden" id="true2" value="">
 
@@ -160,7 +217,7 @@
                                     <p id="demo4"></p> 
 
 
-				    <p id="demo4"> Exercices et notions associees : semi-simplicite, ...</p> 
+				    <p id="demo4"> Exercices et notions associees : semi-simplicite, ...</p>  -->
 
                         </div>
                     </div>
