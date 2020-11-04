@@ -1,20 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+<html><head>
+<META HTTP-EQUIV="Content-Language" content="fr">
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>cours python</TITLE>
+</head>
+<body>
+<p>partie des cours python</p>
 
+<BODY>
+<H1>qcm pour python</H1>
+<HR>
+<FORM NAME="pythonqcm">
 
-    <script type="text/javascript"
-      src="./test.js" async>
-    </script>
+<B>Question 1 :</B><BR>
+Quelles est la balise pour obtenir une boucle avec un nombre de tour connu (24)?<BR>
+<B>R�ponses :</B>
+<INPUT TYPE=RADIO NAME="choix">balise avec un nombre de tour inconnu</INPUT>
+<INPUT TYPE=RADIO NAME="choix">une balise tr�s proche de la bonne </INPUT>
+<INPUT TYPE=RADIO NAME="choix">une balise un peu �loign� de la bonne</INPUT>
+<INPUT TYPE=RADIO NAME="choix">mettre la bonne balise</INPUT>
+<BR><BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="V�rifier"
+ONCLICK="if (document.pythonqcm.choix[3].checked) {alert('Bonne r�ponse.')}
+else {alert('R�ponse fausse.')}">
+<B>Question 2:</B><BR>
+Quelles est la balise pour obtenir une boucle avec un nombre de tour INCONNU?<BR>
+<B>R�ponses :</B>
+<INPUT TYPE=RADIO NAME="choix">bonne balise</INPUT>
+<INPUT TYPE=RADIO NAME="choix">une balise tr�s proche de la bonne </INPUT>
+<INPUT TYPE=RADIO NAME="choix">une balise un peu �loign� de la bonne</INPUT>
+<INPUT TYPE=RADIO NAME="choix">mettre la mauvaise balise balise</INPUT>
+<BR><BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="V�rifier"
+ONCLICK="if (document.pythonqcm.choix[0].checked) {alert('Bonne r�ponse.')}
+else {alert('R�ponse fausse.')}">
+<B>Question 3:</B><BR>Quelle est la fonction la plus adapt�e pour calculer un nombre al�atoire?<BR>
+<B>R�ponses :</B>
+<INPUT TYPE=RADIO NAME="choix">presque bonne</INPUT>
+<INPUT TYPE=RADIO NAME="choix"> bonne </INPUT>
+<INPUT TYPE=RADIO NAME="choix">mauvaise ou trop longue</INPUT>
+<INPUT TYPE=RADIO NAME="choix">mettre une autre fonction</INPUT>
+<BR><BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="V�rifier"
+ONCLICK="if (document.pythonqcm.choix[2].checked) {alert('Bonne r�ponse.')}
+else {alert('R�ponse fausse.')}">
+<B>Question 4:</B><BR>
+Que faut-il rajouter pour que cette fonction soit juste?<BR>
+<B>R�ponses :</B>
+<INPUT TYPE=RADIO NAME="choix">mauvaise r�ponse </INPUT>
+<INPUT TYPE=RADIO NAME="choix">bonne r�ponse mais pas au bon endroit </INPUT>
+<INPUT TYPE=RADIO NAME="choix">bonne r�ponse </INPUT>
+<INPUT TYPE=RADIO NAME="choix">mettre autre chose </INPUT>
+<BR><BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="V�rifier"
+ONCLICK="if (document.pythonqcm.choix[2].checked) {alert('Bonne r�ponse.')}
+else {alert('R�ponse fausse.')}">
+</INPUT>
+</FORM>
+<HR>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script type="text/javascript"
-    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
-   
-
-    <div id="div1"> $$ \int \sin (x) = $$
-    <button id= "btt" onclick= "btt()" name="a";> click! </button>
-    </div>
-
-    <div id="div2" class="container">  </div>
-</html>
+</body>
+</html> 

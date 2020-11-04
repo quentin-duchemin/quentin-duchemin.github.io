@@ -118,8 +118,17 @@
                                     <input type="hidden" id="true1" value="">
                                     <li>  Soit $E$ un ensemble et soit $A \subset E$ un sous-ensemble fini de $E$. Que dire de card($A$) et de card($f(A)$) ? </li>
                                     <br>
-                                    <button onclick="myFunction2(1)"  id="FALSE1"> card\( (f(A))\leq \) card \((A) \)</button>
-                                    <button onclick="myFunction(1)" id="TRUE1"> Non </button>
+
+
+<FORM NAME="pythonqcm">
+<INPUT TYPE=checkbox NAME="choix">balise avec un nombre de tour inconnu</INPUT>
+<INPUT TYPE=checkbox NAME="choix">une balise tr�s proche de la bonne </INPUT>
+<INPUT TYPE=checkbox NAME="choix">une balise un peu �loign� de la bonne</INPUT>
+<INPUT TYPE=checkbox NAME="choix">mettre la bonne balise</INPUT>
+<BR><BR>
+</FORM>
+<button onclick="choix_multiple(1,[false,false,true,true])" id="box1">Vérifier</button>
+                <button onclick="myFunction(1)"  id="TRUE1">Oui</button>
                                     <p id="demo1"></p> 
 
 
