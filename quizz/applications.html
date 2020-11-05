@@ -178,8 +178,8 @@
         <p id="message4"></p> 
 
 
-        <input type="hidden" id="corrige5" value="$1-f$ est la fonction caractéistique de l'ensemble $\overline{A}$. <br>$fg$ est la fonction caractéistique de l'ensemble $A \cap B$. <br>
-$f+g-fg$ est la fonction caractéistique de l'ensemble $A \cup B$. <br>
+        <input type="hidden" id="corrige5" value="$1-f$ est la fonction caractéristique de l'ensemble $\overline{A}$. <br>$fg$ est la fonction caractéristique de l'ensemble $A \cap B$. <br>
+$f+g-fg$ est la fonction caractéristique de l'ensemble $A \cup B$. <br>
 $\max(1,f+g)-fg$ est la fonction caractéristique de l'ensemble $A \Delta B$. On rappelle que la différence symétrique de $A$ et $B$ est $$ A\Delta B = \{x \in E \; | \; x \in (\overline{A}\cap B)\cup (A\cap \overline{B}) \}.$$ ">
         <li>  Soit $ A$ une partie de $ E$, on appelle fonction caractéristique de $ A$ l'application $ f$ de $ E$ dans l'ensemble à deux éléments $ \{0, 1\}$, telle que :
 $$\displaystyle f(x)=\begin{cases} 0& \text{ si } x\notin A \cr 1& \text{ si } x \in A \cr \end{cases}$$
@@ -357,7 +357,7 @@ On a: </li>
 
         <input type="hidden" id="true19" value=""  >
         <li> 
-Soit $\displaystyle \; I_2=\bigcap_{n=1}^{+\infty}\left]-2-\frac{1}{n},4+n^2\right].$
+Soit $\displaystyle \; I_2=\bigcap_{n=1}^{+\infty}\left]-2-\frac{1}{n},4+\frac{1}{n^2}\right].$
 On a: </li>
         <br>
         <FORM id="qcm19">
@@ -369,6 +369,18 @@ On a: </li>
         <button onclick="choix_multiple(19,[false,false,true,false])" id="box19">Vérifier</button>
         <p id="message19"></p> 
 
+
+        <input type="hidden" id="true20" value=""  >
+        <li> 
+Soit $\displaystyle \; I_3=\bigcup_{n=1}^{+\infty}\left[1+\frac{1}{n},n\right].$
+On a: </li>
+        <br>
+        <FORM id="qcm20">
+        <INPUT TYPE=checkbox NAME="choix"> $I_3=[1,+\infty[$.</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> $I_2=]1,+\infty[$.</INPUT>
+        </FORM>
+        <button onclick="choix_multiple(20,[false,true])" id="box20">Vérifier</button>
+        <p id="message20"></p> 
 
 
 
