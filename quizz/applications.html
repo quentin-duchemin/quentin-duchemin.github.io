@@ -384,6 +384,14 @@ On a: </li>
 
 
 
+        <input type="hidden" id="corrige21" value="--> Soit $m \in E$. Il existe alors $n \in \mathbb N$ avec $n \geq 2$ tel que $m \in E_n$. On en déduit qu'il existe $k \in \mathbb N$ avec $k \geq 2$ tel que $m=n\times k$. Comme $k$ et $n$ sont plus grands que $2$, on en déduit que $m \notin \{0,1\}$. De même, comme $k$ et $n$ sont plus grands que $2$, $k \notin \{1,m\}$ et $k$ divise $m$. Donc $m$ n'est pas premier. Ainsi, $m \notin \{0,1\}\cup \mathcal P$. Par contraposée, il vient $$ \{0,1\}\cup \mathcal P \subset \mathbb N \backslash E.$$ <br><br> 
+        --> Montrons l'autre inclusion. Soit $m \in \mathbb N \backslash E$. Supposons par l'absurde que $ m \notin \{0,1\}\cup \mathcal P$. Cela implique que $m$ admet un diviseur non trivial c'est-à-dire qu'il existe $k \in \{2, \dots, m-1\} $ tel que $k$ divise $m$. Il existe donc $n \in \{2, \dots, m-1\}$ tel que $m=nk$. Mais alors $m \in E_n \subset E$ et donc $m \in E$. Ceci est absurde car on a choisi $m$ dans le complémentaire de $E$ dans $\mathbb N$. On en déduit donc que notre hypothèse de départ est fausse et donc que $m \in \{0,1\}\cup \mathcal P$. Ainsi, $$  \mathbb N \backslash E \subset \{0,1\}\cup \mathcal P .$$ <br><br>
+        On a prouvé par double inclusion que  $$  \mathbb N \backslash E = \{0,1\}\cup \mathcal P .$$ " >
+        <li> Pour $n\in \mathbb N$,on définit l'ensemble $E_n=\{kn|k\in \mathbb N, k\geq 2\}$. On pose: $$E=\bigcup_{n \in \mathbb N,n\geq 2}E_n, \quad \text{et} \quad X=\mathbb N\backslash E.$$ Soit $\mathcal P$ l'ensemble des nombres premiers. Montrer que $X=\{0,1\}\cup \mathcal P$. </li>
+        <br>
+        <button onclick="correction(21)" id="box21">Afficher le corrigé.</button>
+        <p id="message21"></p> 
+
 
 
 <!-- 
