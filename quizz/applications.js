@@ -17,6 +17,13 @@ function myFunction2(int) {
     MathJax.Hub.Queue(["Typeset",MathJax.Hub]) 
 }
 
+function correction(int) {
+    var x = document.getElementById("corrige"+int).value;
+    document.getElementById("message"+int).innerHTML = "";
+    $("#message"+int).append(x);
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub]) 
+}
+
 
 function choix_multiple(int,bools) {
 	result = true;

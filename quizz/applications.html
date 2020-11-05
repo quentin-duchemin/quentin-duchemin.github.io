@@ -111,17 +111,18 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1>Enseignement : Quizz</h1>
-                        <h2>Applications</h2>
+                        <h2>Cours de Méthodologie des mathématiques</h2>
                         <div id="content-area">
 
         <input type="hidden" id="true1" value="En effet, tout élément $x \in A$ admet une unique image par $f$ dans $F$, mais l'ensemble $f(A)$ peut potentiellement être de cardinal plus petit que celui de $A$. Il suffit de considérer une application constante pour s'en convaincre.">
         <input type="hidden" id="false1" value="">
-        <li>  Soient $E$ et $F$ deux ensembles, et $f:E \to F$ une application. On considère $A \subset E$ un sous-ensemble $\mathbf{fini}$ de $E$. Que dire de card($A$) et de card($f(A)$) ? On choisira la réponse donnant le résultat le plus informatif possible.</li>
+        <li>  Soient $E$ et $F$ deux ensembles, et $f:E \to F$ une application. On considère $A \subset E$ un sous-ensemble $\mathbf{fini}$ de $E$. Que dire de card($A$) et de card($f(A)$) ? (Par convention, card($C$)$=+\infty$ si l'ensemble $C$ n'est pas fini). On choisira la réponse donnant le résultat le plus informatif possible. </li>
         <br>
         <FORM id="qcm1">
         <INPUT TYPE=checkbox NAME="choix"> \( card(f(A)) \leq card(A) \)</INPUT><BR><BR>
         <INPUT TYPE=checkbox NAME="choix"> \( card(f(A)) \geq card(A) \) </INPUT><BR><BR>
-        <INPUT TYPE=checkbox NAME="choix"> \( card(f(A)) = card(A) \)</INPUT>
+        <INPUT TYPE=checkbox NAME="choix"> \( card(f(A)) = card(A) \)</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> On ne peut rien affirmer en toute généralité.</INPUT>
         <BR><BR>
         </FORM>
         <button onclick="choix_multiple(1,[true,false,false])" id="box1">Vérifier</button>
@@ -129,21 +130,25 @@
 
 
 
-        <input type="hidden" id="true2" value="">
+        <input type="hidden" id="true2" value="Donnons quelques exemples. 
+		<BR> $\cos^{-1}(\{0\}) = 2 \pi \mathbb Z$ n'est pas fini alors que $\{0\}$ est fini. 
+		<BR> $\cos^{-1}(\{2\}) = \emptyset$ est l'ensemble vide.
+		<BR> $\exp^{-1}(\{1\}) = \{0\}$ est un singleton.">
         <input type="hidden" id="false2" value="">
-        <li>  Soient $E$ et $F$ deux ensembles, et $f:E \to F$ une application. On considère $B \subset F$ un sous-ensemble $\mathbf{fini}$ de $F$. Que dire de card($B$) et de card($f^{-1}(B)$) ? On choisira la réponse donnant le résultat le plus informatif possible.</li>
+        <li>  Soient $E$ et $F$ deux ensembles, et $f:E \to F$ une application. On considère $B \subset F$ un sous-ensemble $\mathbf{fini}$ de $F$. Que dire de card($B$) et de card($f^{-1}(B)$) ? (Par convention, card($C$)$=+\infty$ si l'ensemble $C$ n'est pas fini). On choisira la réponse donnant le résultat le plus informatif possible. </li>
         <br>
         <FORM id="qcm2">
         <INPUT TYPE=checkbox NAME="choix"> \( card(f^{-1}(B)) \leq card(B) \)</INPUT><BR><BR>
         <INPUT TYPE=checkbox NAME="choix"> \( card(f^{-1}(B)) \geq card(B) \) </INPUT><BR><BR>
-        <INPUT TYPE=checkbox NAME="choix"> \( card(f^{-1}(B)) = card(B) \)</INPUT>
+        <INPUT TYPE=checkbox NAME="choix"> \( card(f^{-1}(B)) = card(B) \)</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> On ne peut rien affirmer en toute généralité.</INPUT>
         <BR><BR>
         </FORM>
-        <button onclick="choix_multiple(2,[false,false,true])" id="box2">Vérifier</button>
+        <button onclick="choix_multiple(2,[false,false,false,true])" id="box2">Vérifier</button>
         <p id="message2"></p> 
            
 
-        <input type="hidden" id="true3" value="En effet, $0$ n'admet pas d'antécédent par $f$ et donc $f$ n'est pas surjective. Remarquons alos qu'en modifiant l'ensemble pour l'espace d'arrivée de l'application $f$, on peut construire une fonction bijective. Ainsi, $g:\mathbb N \to \mathbb N \backslash \{0\}$ telle que $g(n)=f(n), \; \forall n \in \mathbb N$ est bijective.">
+        <input type="hidden" id="true3" value="En effet, $0$ n'admet pas d'antécédent par $f$ et donc $f$ n'est pas surjective. Remarquons qu'en modifiant l'ensemble d'arrivée de l'application $f$, on peut construire une fonction bijective. Ainsi, $g:\mathbb N \to \mathbb N \backslash \{0\}$ telle que $g(n)=f(n), \; \forall n \in \mathbb N$ est bijective.">
         <input type="hidden" id="false3" value="">
         <li>  On considère $f:\mathbb N \to \mathbb N$ telle que $f(n)=n+1$. </li>
         <br>
@@ -168,26 +173,207 @@
         <INPUT TYPE=checkbox NAME="choix"> \( f^{-1}(\{1\})=\{(0,1)\} \) </INPUT><BR><BR>
         <INPUT TYPE=checkbox NAME="choix"> \( f^{-1}(\{0\})=\{(0,1)\} \) </INPUT><BR><BR>
         <INPUT TYPE=checkbox NAME="choix"> \( f^{-1}(\{1\}) \) est la cercle de centre $(0,0)$ et de rayon $1$</INPUT>
-        <BR><BR>
         </FORM>
         <button onclick="choix_multiple(4,[true,false,false,true])" id="box4">Vérifier</button>
         <p id="message4"></p> 
 
 
-        <input type="hidden" id="true5" value="">
-        <input type="hidden" id="false5" value="">
-        <li>  On considère $f:\mathbb R \times \mathbb R \to \mathbb R$ telle que $$\forall (x,y) \in \mathbb R^2, \quad f(x,y)=x^2+y^2.$$
-        Cochez la ou les bonne(s) réponse(s). </li>
+        <input type="hidden" id="corrige5" value="$1-f$ est la fonction caractéistique de l'ensemble $\overline{A}$. <br>$fg$ est la fonction caractéistique de l'ensemble $A \cap B$. <br>
+$f+g-fg$ est la fonction caractéistique de l'ensemble $A \cup B$. <br>
+$\max(1,f+g)-fg$ est la fonction caractéristique de l'ensemble $A \Delta B$. On rappelle que la différence symétrique de $A$ et $B$ est $$ A\Delta B = \{x \in E \; | \; x \in (\overline{A}\cap B)\cup (A\cap \overline{B}) \}.$$ ">
+        <li>  Soit $ A$ une partie de $ E$, on appelle fonction caractéristique de $ A$ l'application $ f$ de $ E$ dans l'ensemble à deux éléments $ \{0, 1\}$, telle que :
+$$\displaystyle f(x)=\begin{cases} 0& \text{ si } x\notin A \cr 1& \text{ si } x \in A \cr \end{cases}$$
+
+Soit $ A$ et $ B$ deux parties de $ E$, $ f$ et $ g$ leurs fonctions caractéristiques. Montrer que les fonctions suivantes sont les fonctions caractéristiques d'ensembles que l'on déterminera : <br>
+$$ 1) \quad 1-f \quad  \quad 2) \quad fg \quad \quad 3) \quad f+g-fg \quad \quad 4) \quad \max(1,f+g)-fg..$$
+</li>
         <br>
-        <FORM id="qcm5">
-        <INPUT TYPE=checkbox NAME="choix"> \( f^{-1}(\{0\})=\{(0,0)\} \) </INPUT><BR><BR>
-        <INPUT TYPE=checkbox NAME="choix"> \( f^{-1}(\{1\})=\{(0,1)\} \) </INPUT><BR><BR>
-        <INPUT TYPE=checkbox NAME="choix"> \( f^{-1}(\{0\})=\{(0,1)\} \) </INPUT><BR><BR>
-        <INPUT TYPE=checkbox NAME="choix"> \( f^{-1}(\{1\}) \) est la cercle de centre $(0,0)$ et de rayon $1$</INPUT>
-        <BR><BR>
-        </FORM>
-        <button onclick="choix_multiple(5,[true,false,false,true])" id="box5">Vérifier</button>
+                <button onclick="correction(5)" id="box5">Afficher le corrigé.</button>
         <p id="message5"></p> 
+
+
+
+        <input type="hidden" id="true6" value="">
+        <input type="hidden" id="false6" value="">
+        <li> Dans un raisonnement par Analyse-Synthèse, la première partie de la démonstration (i.e. l'Analyse) consiste à ... </li>
+        <br>
+        <FORM id="qcm6">
+        <INPUT TYPE=checkbox NAME="choix">  ... extraire une (ou des) condition(s) nécessaire(s) </INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> ... extraire une (ou des) condition(s) suffisante(s)</INPUT>
+        </FORM>
+        <button onclick="choix_multiple(6,[true,false])" id="box6">Vérifier</button>
+        <p id="message6"></p> 
+
+
+        <input type="hidden" id="true7" value="">
+        <input type="hidden" id="false7" value="">
+        <li> Dans un raisonnement par Analyse-Synthèse, la seconde partie de la démonstration (i.e. la Synthèse) consiste à ... </li>
+        <br>
+        <FORM id="qcm7">
+        <INPUT TYPE=checkbox NAME="choix"> ... montrer que la (ou les) condition(s) suffisante(s) extraite(s) lors de l'étape d'Analyse sont nécessaire(s)</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix">  ... montrer que la (ou les) condition(s) nécessaire(s) extraite(s) lors de l'étape d'Analyse sont suffisante(s)</INPUT>
+        </FORM>
+        <button onclick="choix_multiple(7,[false,true])" id="box7">Vérifier</button>
+        <p id="message7"></p> 
+
+
+        <input type="hidden" id="true8" value="En effet, si la proposition était vraie, cela signifierait que tout nombre entier peut s'écrire comme le carré d'un autre nombre entier. Un contre-exemple simple pour justifier que la proposition est fausse serait de remarquer $2$ n'admet comme diviseurs dans $\mathbb N$ que $1$ et $2$. Or, $1^2 \neq 2$ et $2^2 \neq 2$. ">
+        <input type="hidden" id="false8" value="">
+        <li> La proposition $\forall n \in \mathbb N, \; \exists k \in \mathbb N, \; n=k^2$ est-elle ...  </li>
+        <br>
+        <FORM id="qcm8">
+        <INPUT TYPE=checkbox NAME="choix"> ... vraie?</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix">  ... fausse?</INPUT>
+        </FORM>
+        <button onclick="choix_multiple(8,[false,true])" id="box8">Vérifier</button>
+        <p id="message8"></p> 
+
+
+        <input type="hidden" id="true9" value="Dans $\mathcal P_1$, le quantificateur ''il existe'' est positionné avant la quantificateur ''quelque soit''. Cela signifie que la constante $k$ de la proposition $\mathcal P_1$ soit être choisie indépendamment de $n$. Autrement dit, la constante $k$ de la proposition doit être universelle. Pour montrer que la proposition $\mathcal P_1$ est fausse, un raisonnement par l'absurde est naturel. Dans la proposition $\mathcal P_2$, le quantificateur ''il existe'' est positionné avant la quantificateur ''quelque soit''. Cela signifie que la constante $k$ de la proposition $\mathcal P_1$ peut dépendre de $n$. Ainsi, pour tout $n \in \mathbb N$, choisir $k=n^2$ convient et prouve que la proposition $\mathcal P_2$ est vraie." >
+        <li> On s'intéresse à l'importance de l'ordre des quantificateurs dans une proposition. Soit $\mathcal P_1$ la proposition $\exists k \in \mathbb N, \; \forall n \in \mathbb N , \; n^2=k$ et soit $\mathcal P_2$ la proposition $\forall n \in \mathbb N, \; \exists k \in \mathbb N, \; n^2=k$.  </li>
+        <br>
+        <FORM id="qcm9">
+        <INPUT TYPE=checkbox NAME="choix"> $\mathcal P_1$ et $\mathcal P_2$ sont toutes les deux vraies.</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix">  $\mathcal P_1$ est fausse et $\mathcal P_2$ est vraie.</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix">  $\mathcal P_1$ est vraie et $\mathcal P_2$ est fausse.</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix">  $\mathcal P_1$ et $\mathcal P_2$ sont toutes les deux fausses.</INPUT>
+        </FORM>
+        <button onclick="choix_multiple(9,[false,true,false,false])" id="box9">Vérifier</button>
+        <p id="message9"></p> 
+
+
+        <input type="hidden" id="corrige10" value="Supposons $f$ et $g$ injectives. Soient $x_1,x_2 \in E$ tels que $g(f(x_1))=g(f(x_2))$ $(*_1)$. Alors comme $g$ est injective, l'égalité $(*_1)$ implique que $f(x_1)=f(x_2)$ $(*_2)$. A présent, l'injectivité de $f$ et $(*_2)$ implique que $x_1=x_2$. On en déduit que si deux éléments de $E$, $x_1$ et $x_2$ ont même image par $g\circ f$, alors ils sont égaux. Cela signifie que $g\circ f$ est injective." >
+        <li> Soient $E$, $F$ et $G$ trois ensembles. Soient $f: E \to F$ et $g: F \to G$  deux applications. Montrer que si $f$ et $g$ sont injectives  alors $g \circ f$ est injective.  </li>
+        <br>
+        <button onclick="correction(10)" id="box10">Afficher le corrigé.</button>
+        <p id="message10"></p> 
+
+
+        <input type="hidden" id="true11" value="Voici un contre-exemple. Soient $g:\mathbb R \to \mathbb N$ et $f:\mathbb N \to \mathbb R$ telles que $$\forall x \in \mathbb R, \quad g(x)= \left\{
+    \begin{array}{ll}
+        0 & \mbox{si } x \notin \mathbb N \\
+        x & \mbox{si } x \in \mathbb N
+    \end{array}
+\right.  \qquad \text{ et } \quad \forall n \in \mathbb N, \quad f(n)=n.$$ Alors, $g \circ f$ est la fonction identité de $\mathbb N$ dans $\mathbb N$ c'est-à-dire que pour tout $n \in \mathbb N$, $g(f(n))=n$. $g \circ f$ est donc injective mais la fonction $g$ n'est pas injective de $\mathbb R$ dans $\mathbb N$ (par exemple car $g(1/2)=g(3/2)=0$)."  >
+        <li> On s'intéresse à la réciproque de la proposition de la question précédente. Est-ce que $g \circ f$ injective implique $f$ et $g$ injectives ? </li>
+        <br>
+        <FORM id="qcm11">
+        <INPUT TYPE=checkbox NAME="choix"> Oui</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> Non</INPUT>
+        </FORM>
+        <button onclick="choix_multiple(11,[false,true])" id="box11">Vérifier</button>
+        <p id="message11"></p> 
+
+
+        <input type="hidden" id="true12" value=""  >
+        <li> Pour tout $n \in \mathbb N$, on note $E_n= \{0, 1, \dots, n \}$.  On note $\mathcal P(E_n)$ l’ensemble des parties de $E_n$. Quelles sont les bonnes réponses ? </li>
+        <br>
+        <FORM id="qcm12">
+        <INPUT TYPE=checkbox NAME="choix"> $\mathcal P(E_2) = \{\{1\},\{2\}\}$</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> $\mathcal P(E_2) = \{\emptyset, \{1\},\{2\}, E_2\}$</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> card$( \mathcal P(E_n)) = n$</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> card$( \mathcal P(E_n)) = 2^n$</INPUT>
+        </FORM>
+        <button onclick="choix_multiple(12,[false,true,false,true])" id="box12">Vérifier</button>
+        <p id="message12"></p> 
+
+
+        <input type="hidden" id="true13" value=""  >
+        <li> Soit $E$ un ensemble et soit $A \subset E$ un sous-ensemble de $E$. Comment considère $X \subset E$ de façon à avoir $$(i) \quad X \cap A = A \quad \text{ et } \quad (ii) \quad X \cup A = E ?$$</li>
+        <br>
+        <FORM id="qcm13">
+        <INPUT TYPE=checkbox NAME="choix"> $X=\overline{A}.$</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> $X= E.$</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> $X=A$.</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> Un tel ensemble $X$ n'existe pas.</INPUT>
+        </FORM>
+        <button onclick="choix_multiple(13,[false,true,false,false])" id="box13">Vérifier</button>
+        <p id="message13"></p> 
+
+
+
+        <input type="hidden" id="corrige14" value="Vérifions toutes les conditions pour montrer que les $(A_i)_{i \in \{1,2,3\}}$ forment une partition de $E$. <br>
+- Pour tout $i,j \in \{1,2,3\}$ avec $i \neq j$, $A_i \cap A_j= \emptyset$ car pour tout $f \in E$, l'image de $0$ par $f$ ne peut pas valoir à la fois $i$ et $j$ (car $i \neq j$). <br>
+- Pour tout $i \in \{1,2,3\}$, $A_i \neq \emptyset $ car l'application constante $g_i$ définie par $g_i(n)=i$ pour tout $n \in \mathbb N$ appartient à $A_i$. <br>
+- Soit $f \in E$. Alors, notant $i=f(0)$, on a $f \in A_i$ et donc $A_1 \cup A_2 \cup A_3 =E$. <br>
+Ainsi, on a montré que les $(A_i)_{i \in \{1,2,3\}}$ forment une partition de $E$. " >
+        <li> Soit $ E$ l'ensemble des fonctions de $ \mathbb{N}$ dans $ \left\{ 1, 2, 3\right\}$. Pour $ i = 1, 2, 3$ on pose $ A_i = \left\{ f \in E / f (0) = i \right\}$. Montrer que les $ A_i$ forment une partition de $ E$. </li>
+        <br>
+        <button onclick="correction(14)" id="box14">Afficher le corrigé.</button>
+        <p id="message14"></p> 
+
+
+        <input type="hidden" id="true15" value=""  >
+        <li> Donner les positions relatives de $ A, B, C \subset E$ si $ A \cup B = B \cap C$.</li>
+        <br>
+        <FORM id="qcm15">
+        <INPUT TYPE=checkbox NAME="choix"> $B \subset C \subset A$.</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> $B \subset A \subset C$.</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> $A \subset B \subset C$.</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> $A \subset C \subset B$.</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> $C \subset B \subset A$.</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> $C \subset A \subset B$.</INPUT>
+        </FORM>
+        <button onclick="choix_multiple(15,[false,false,true,false,false,false])" id="box15">Vérifier</button>
+        <p id="message15"></p> 
+
+
+        <input type="hidden" id="corrige16" value="Soient $A,B \in \mathcal P(E)$ tels que $A \neq B$. Quitte à échanger les rôles de $A$ et $B$, on peut supposer qu'il existe $x \in A \backslash B=A \cap \overline{B}.$ Alors, $x \in A\cup B$ car $x$ appartient à $A$, mais $x \notin A \cap B$ car $x$ n'appartient pas à $B$. On en déduit que $A \cap B \neq A \cup B$. Par contraposée, on en déduit la proposition de l'énoncé." >
+        <li> 
+Montrer par contraposition l'assertion suivante, $ E$ étant un ensemble :
+    $$ \forall A,B \in \mathcal{P}(E) \quad (A\cap B=A\cup B)\Rightarrow A=B,$$
+        <br>
+        <button onclick="correction(16)" id="box16">Afficher le corrigé.</button>
+        <p id="message16"></p> 
+
+
+        <input type="hidden" id="corrige17" value="Soient $A,B,C \in \mathcal P(E)$ tels que $B \neq C$. Quitte à échanger les rôles de $B$ et $C$, on peut supposer qu'il existe $x \in B \backslash C=B \cap \overline{C}.$ On distingue alors deux cas: <br>
+--> Si $x \in A$, alors $x \in A\cap B$ (car $x$ appartient à $A$ et à $B$) mais $x \notin A\cap C$ (car $x$ n'appartient pas à $C$). Donc, on a dans ce cas $$A\cap B \neq A \cap C.$$
+--> Si $x \notin A$, alors $x \in A\cup B$ (car $x$ appartient à $B$) mais $x \notin A\cup C$ (car $x$ n'appartient ni à $A$ ni à $C$). Donc, on a dans ce cas $$A\cup B \neq A \cup C.$$
+
+BILAN: Si $B \neq C$, alors ($A\cap B \neq A \cap C$ ou $A\cup B \neq A \cup C$). Par contraposée, on obtient la proposition de l'énoncé. En effet, on rappelle que la négation de la proposition ($A\cap B \neq A \cap C$ ou $A\cup B \neq A \cup C$) est ($A\cap B = A \cap C$ et $A\cup B = A \cup C$)." >
+        <li> 
+Montrer par contraposition l'assertion suivante, $E$ étant un ensemble :
+    $$ \forall A,B,C \in \mathcal{P}(E) \quad (A\cap B=A\cap C \text{   et   } A\cup B=A\cup C)\Rightarrow B=C.$$ </li>
+        <br>
+        <button onclick="correction(17)" id="box17">Afficher le corrigé.</button>
+        <p id="message17"></p> 
+
+
+
+        <input type="hidden" id="true18" value=""  >
+        <li> 
+Soit $\displaystyle I_1=\bigcap_{n=1}^{+\infty}\left[3,3+\frac{1}{n^2}\right[\;$. 
+On a: </li>
+        <br>
+        <FORM id="qcm18">
+        <INPUT TYPE=checkbox NAME="choix"> $I_1=\emptyset$.</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> $I_1 = \{3\}$.</INPUT>
+        </FORM>
+        <button onclick="choix_multiple(18,[false,true])" id="box18">Vérifier</button>
+        <p id="message18"></p> 
+
+
+
+        <input type="hidden" id="true19" value=""  >
+        <li> 
+Soit $\displaystyle \; I_2=\bigcap_{n=1}^{+\infty}\left]-2-\frac{1}{n},4+n^2\right].$
+On a: </li>
+        <br>
+        <FORM id="qcm19">
+        <INPUT TYPE=checkbox NAME="choix"> $I_2=]-2,4]$.</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> $I_2=]-2,4[$.</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> $I_2=[-2,4]$.</INPUT><BR><BR>
+        <INPUT TYPE=checkbox NAME="choix"> $I_2 = [-2,4[$.</INPUT>
+        </FORM>
+        <button onclick="choix_multiple(19,[false,false,true,false])" id="box19">Vérifier</button>
+        <p id="message19"></p> 
+
+
+
+
+
+
 <!-- 
 
                                     <input type="hidden" id="false2" value="sin(x)">
